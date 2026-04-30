@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Homepage
+        WineLover - homepage
     </title>
     <link rel="stylesheet" href="../styles/homepage.css">
     <link rel="stylesheet" href="../styles/global.css">
@@ -15,14 +15,60 @@
             <h1>WineLover</h1>
         </div>
         <div class="menu">
-            <button class="menuButton">Homepage</button>
-            <button class="menuButton">Search</button>
-            <button class="menuButton">My reviews</button>
-            <button class="menuButton">My profile</button>
+            <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
+            <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
+            <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
+            <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
         </div>
     </div>
     <div class="mainPage">
-        
+        <div class="wineOfTheDay">
+            <h1 class="wineOfTheDayHeading">Wine of the day</h1>
+            <!--We should retrieve this image from a database, and have it changed everyday-->
+            <img class="wineImage" src="../../images/testImage.png" height="250" width="200">
+            <form class="findWines" action="search.html">
+                <h2 class="wineOfTheDayHeading">Find a wine</h2>
+                <p>Fill in as many as desired</p>
+                <div class="findWinesInformation">
+                    <div class="findWinesRow">
+                        <label for="wine-name">Name</label>
+                        <input id="wine-name" type="text" name="Name">
+                    </div>
+                    <div class="findWinesRow">
+                        <label for="wine-year">Year</label>
+                        <input id="wine-year" type="number" name="Year">
+                    </div>
+                    <div class="findWinesRow">
+                        <label for="wine-grape">Grape</label>
+                        <input id="wine-grape" type="text" name="Grape">
+                    </div>
+                    <div class="findWinesRow">
+                        <label for="wine-location">Location</label>
+                        <input id="wine-location" type="text" name="Location">
+                    </div>
+                    <div class="findWinesRow">
+                        <label for="wine-keywords">Keywords</label>
+                        <input id="wine-keywords" type="text" name="Keywords">
+                    </div>
+                </div>
+                <button class="findWineButton" type="submit">
+                    Search
+                </button>
+            </form>
+        </div>
+        <div class="myWines">
+            <button class="myWinesButton" onclick="window.location.href='myReviews.html'">
+                <h1>My wines</h1>
+            </button>
+            <!--Here we will retrieve the 4 last wines (to have a preview) from the database, 
+            but for now I only display dummy images just to have an idea of how the layout will look-->
+            <div class="wineImages">
+                <img class="wineImage" src="../../images/dummyImage.png">
+                <img class="wineImage" src="../../images/dummyImage.png">
+                <img class="wineImage" src="../../images/dummyImage2.png">
+                <img class="wineImage" src="../../images/dummyImage2.png">
+            </div>
+        </div>
     </div>
 </body>
 
