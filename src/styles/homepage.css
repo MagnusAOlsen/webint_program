@@ -1,0 +1,113 @@
+.mainPage {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.wineOfTheDay {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center; 
+}
+
+.myWines {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.myWinesButton {
+    margin-top: 30px;
+    background-color: #9c0909;
+    border: #ffffff;
+    padding: 2px;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 300px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.myWinesButton:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wineOfTheDayHeading {
+    text-decoration: underline;
+    text-decoration-color: #9c0909;
+    margin-top: 30px;
+}
+
+.wineImage {
+    margin-top: 30px;
+    border: 2px solid #9c0909;
+    border-radius: 8px;
+    width: 100%;           
+    max-width: 300px;      
+    height: auto;          
+    object-fit: contain;
+}
+
+.findWinesInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 520px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.findWinesRow {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+    align-items: center;
+    justify-items: start;
+}
+
+.findWinesRow label {
+    text-align: left;
+    font-weight: 600;
+}
+
+.findWinesRow input {
+    width: 90%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.findWinesLabels,
+.findWinesInput {
+    display: none;
+}
+
+.findWineButton{
+    margin-top: 30px;
+    background-color: #9c0909;
+    border: #ffffff;
+    padding: 8px 12px;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 300px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.findWineButton:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.wineImages {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    width: 80%;
+    max-width: 640px;
+    margin-top: 30px;
+}
