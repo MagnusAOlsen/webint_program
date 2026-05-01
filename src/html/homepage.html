@@ -24,11 +24,11 @@
     </div>
     <div class="mainPage">
         <div class="wineOfTheDay">
-            <h1 class="wineOfTheDayHeading">Wine of the day</h1>
+            <h1 class="heading">Wine of the day</h1>
             <!--We should retrieve this image from a database, and have it changed everyday-->
             <img class="wineImage" src="../../images/testImage.png" height="250" width="200">
             <form class="findWines" action="search.html" method="GET">
-                <h2 class="wineOfTheDayHeading">Find a wine</h2>
+                <h2 class="heading">Find a wine</h2>
                 <p>Fill in as many as desired</p>
                 <div class="findWinesInformation">
                     <div class="findWinesRow">
@@ -52,13 +52,13 @@
                         <input id="wine-keywords" type="text" name="Keywords">
                     </div>
                 </div>
-                <button class="findWineButton" type="submit">
+                <button class="primaryButton" type="submit">
                     Search
                 </button>
             </form>
         </div>
         <div class="myWines">
-            <button class="myWinesButton" onclick="window.location.href='myReviews.html'">
+            <button class="myWinesButton primaryButton" onclick="window.location.href='myReviews.html'">
                 <h1>My wines</h1>
             </button>
             <!--Here we will retrieve the 4 last wines (to have a preview) from the database, 

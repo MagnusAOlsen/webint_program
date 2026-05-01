@@ -22,21 +22,15 @@
 }
 
 .myWinesButton {
-    margin-top: 30px;
-    background-color: #9c0909;
-    border: #ffffff;
     padding: 2px;
-    color: #ffffff;
-    border-radius: 8px;
-    width: 300px;
-    font-family: 'Times New Roman', Times, serif;
 }
 
-.myWinesButton:hover {
-    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+.myWinesButton h1 {
+    margin: 0;
+    font-size: 1.2rem;
 }
 
-.wineOfTheDayHeading {
+.heading {
     text-decoration: underline;
     text-decoration-color: #9c0909;
     margin-top: 30px;
