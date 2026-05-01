@@ -6,11 +6,17 @@
         WineLover - Search
     </title>
     <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="../styles/search.css">
     <link rel="stylesheet" href="../styles/global.css">
+
+    <meta charset="UTF-8">
+
 </head>
 
+
+
 <body>
-    <div class="header">
+    <header class="header">
         <div class="appName">
             <h1>WineLover</h1>
         </div>
@@ -20,5 +26,53 @@
             <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
             <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
         </div>
-    </div>
+    </header>
+
+    <main class="searchPage">
+        <form class="findWines">
+            <h2 class="findAWine">Find a wine</h2>
+            <p class="searchHint">Fill in as many as desired</p>
+
+            <div class="findWinesInformation">
+                <div class="findWinesRow">
+                    <label for="wine-name">Name</label>
+                    <input id="wine-name" type="text" name="Name">
+                </div>
+                <div class="findWinesRow">
+                    <label for="wine-year">Year</label>
+                    <input id="wine-year" type="number" name="Year">
+                </div>
+                <div class="findWinesRow">
+                    <label for="wine-grape">Grape</label>
+                    <input id="wine-grape" type="text" name="Grape">
+                </div>
+                <div class="findWinesRow">
+                    <label for="wine-location">Location</label>
+                    <input id="wine-location" type="text" name="Location">
+                </div>
+                <div class="findWinesRow">
+                    <label for="wine-keywords">Keywords</label>
+                    <input id="wine-keywords" type="text" name="Keywords">
+                </div>
+            </div>
+            <button class="findWineButton" type="submit">
+                Search
+            </button>
+            <button class="findWineButton" type="button" id="showAllButton" style="max-width: 100px; background-color: rgb(0, 0, 0);">
+                Display All
+            </button>
+        </form>
+
+        <div class="resultsSection">
+            <h2 style="margin: 20px;">Results</h2>
+            <div class="wineResults">
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="../javascript/search.js"></script>
+
 </body>

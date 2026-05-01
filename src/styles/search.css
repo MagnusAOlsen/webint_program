@@ -1,0 +1,88 @@
+.findWinesInformation {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 520px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+.findWinesRow {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+    align-items: center;
+    justify-items: start;
+}
+
+.findWinesRow label {
+    text-align: left;
+    font-weight: 600;
+}
+
+.findWinesRow input {
+    width: 90%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.findWinesLabels,
+.findWinesInput {
+    display: none;
+}
+
+.findWineButton{
+    margin-top: 30px;
+    background-color: #9c0909;
+    border: #ffffff;
+    padding: 8px 12px;
+    color: #ffffff;
+    border-radius: 8px;
+    width: 300px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.findWineButton:hover {
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.findAWine{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #9c0909;
+    margin-top: 30px;
+}
+
+.findWines{
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.wineCard {
+    border: 2px solid #9c0909;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.wineResults {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.searchPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.searchHint {
+    margin-bottom: 20px;
+    color: #555;
+}
