@@ -17,3 +17,6 @@ Our functionalities:
     - User can keep track of various wines they have consumed and notes on each wine
 - User profile page
     - User can update their own profile page with user details and their own personal quote
+
+## AI usage
+Copilot used to help remove redundancies from code
