@@ -1,24 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            WineLover - My Reviews
+        </title>
+        
+        <link rel="stylesheet" href="../styles/global.css">
+        <link rel="stylesheet" href="../styles/myReviews.css">
+    </head>
 
-<head>
-    <title>
-        WineLover - My Reviews
-    </title>
-    <link rel="stylesheet" href="../styles/homepage.css">
-    <link rel="stylesheet" href="../styles/global.css">
-</head>
-
-<body>
-    <div class="header">
-        <div class="appName">
-            <h1>WineLover</h1>
+    <body>
+        <div class="page">
+            <div class="header">
+                <div class="appName">
+                    <h1>WineLover</h1>
+                </div>
+                <div class="menu">
+                    <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
+                    <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
+                    <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
+                    <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
+                </div>
+            </div>
+            <div id="backdrop" class="hidden"></div>
+            <form id="searchWine" class="hidden">
+                <input type="text" id="nameOfWine" placeholder="Name of the wine">
+                <input type="text" id="location" placeholder="Location (country, city)">
+                <input type="text" id="year" placeholder="year (ex: 2021)">
+                <div id="stars" class="stars">
+                    <span class="star" data-val="1">★</span>
+                    <span class="star" data-val="2">★</span>
+                    <span class="star" data-val="3">★</span>
+                    <span class="star" data-val="4">★</span>
+                    <span class="star" data-val="5">★</span>
+                </div>
+                <input type="text" id="keywords" placeholder="Keywords (separate with comma)">
+                <input type="text" id="food" placeholder="Food to match the wine"> 
+            </form>
+            <div class="fullReview">
+                <div class="reviewHeader">
+                    <div class="reviewHeaderLeft">
+                        <h1 class="myRewievsTitle">My reviews</h1>
+                        <button id="filterButton" class="filterButton">
+                            <img class="filterImage" src="../../images/search_filter.png">
+                        </button>
+                    </div>
+                    <button id="addWineButton" class="addWineButton"><h2 class="addWineButtonText">Add new wine</h2></button>
+                </div>
+                <div class="wineBoxes">
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_0.5_of_5.png">
+                        <p>Very bad experience. I don't want to talk about it.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_1_of_5.png">
+                        <p>The wine was not good, not balanced at all. </p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_1.5_of_5.png">
+                        <p>I liked the wine, but I spilled it on my t-shirt and now the stain won't go away:(</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_2_of_5.png">
+                        <p>This wine opens with muted aromas of bruised red fruit and a faint earthiness that 
+                            struggles to find its footing. On the palate, it's thin-bodied with sharp acidity, a short finish, and little complexity to hold your interest past the first sip.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_2.5_of_5.png">
+                        <p>A modest pour that shows some promise with hints of cherry and dried herbs, though it lacks the structure to fully deliver. Drinkable on a casual evening, but don't expect it to linger in your memory.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_3_of_5.png">
+                        <p>A solid, unpretentious wine with a pleasant nose of red plum and a touch of vanilla from light oak aging. It won't challenge your palate, but it's balanced enough to pair comfortably with a weeknight meal.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_3.5_of_5.png">
+                        <p>This bottle reveals a nicely layered bouquet of dark cherry, leather, and subtle spice, with a medium body that carries through to a satisfying finish. A reliable choice that punches slightly above its price point.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_4_of_5.png">
+                        <p>Generous and expressive on the nose with blackcurrant, toasted oak, and a whisper of violet, this wine shows real confidence and precision on the palate. The tannins are well-integrated and the finish lingers long enough to make you pour a second glass.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_4.5_of_5.png">
+                        <p>A genuinely impressive wine that marries complexity with elegance — layers of dark fruit, graphite, and aged leather unfold beautifully with every sip. The finish is long, structured, and deeply satisfying, with only the faintest rough edge keeping it from perfection.</p>
+                    </div>
+                    <div class="wine">
+                        <div class="placeYearDate">
+                            <p>2023, Trondheim</p>
+                            <p>17.01.2026</p>
+                        </div>
+                        <h3>Name of wine</h3>
+                        <div class="wineImageReview">
+                            <img src="../../images/testwine.png">
+                        </div>
+                        <img src="../../images/stars/Star_rating_5_of_5.png">
+                        <p>One simply does not drink this wine so much as bear witness to it, a transcendent expression of terroir so achingly precise that lesser bottles should feel embarrassed to share a cellar with it. The nose alone, an effortless cascade of cassis, crushed violets, cigar box, and something one can only describe as time itself, demands silent contemplation before one even dares bring the glass to one's lips. On the palate, the tannins are so exquisitely resolved, so gossamer in their architecture, that calling them tannins feels almost vulgar. The finish, naturally, is eternal.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="menu">
-            <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
-            <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
-            <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
-            <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
-        </div>
-    </div>
-</body>
+        <script src="../javascript/myReviews.js"></script>
+    </body>
+</html>
