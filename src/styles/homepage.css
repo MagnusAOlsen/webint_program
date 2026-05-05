@@ -46,12 +46,26 @@
     object-fit: contain;
 }
 
-
-.wineImages {
+.wineReviewImages {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
-    width: 80%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
     max-width: 640px;
     margin-top: 30px;
 }
+
+
+.wineReviewImages img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.wineImageStars img {
+    width: 80px;
+    height: auto;
+}
+
+
+

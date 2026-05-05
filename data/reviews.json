@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "name": "Château Margaux",
+        "year": 2023,
+        "location": "Bordeaux, France",
+        "rating": 5,
+        "date": "17.01.2026",
+        "description": "Outstanding wine ...",
+        "keywords": ["bold", "elegant"],
+        "img": "../../images/testWine.png"
+    },
+    {
+        "id": 2,
+        "name": "Chianti",
+        "year": 2021,
+        "location": "Italy",
+        "rating": 3,
+        "date": "21.01.2026",
+        "description": "Mid ...",
+        "keywords": ["mid"],
+        "img": "../../images/testWine.png"
+    },
+    {
+        "id": 2,
+        "name": "Pago Casa Gran Reposo White 2024",
+        "year": 2024,
+        "location": "Valencia, Spania",
+        "rating": 4.5,
+        "date": "03.05.2026",
+        "description": "Very good! ...",
+        "keywords": [],
+        "img": "../../images/testWine.png"
+    }
+]
