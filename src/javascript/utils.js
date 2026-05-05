@@ -1,5 +1,5 @@
 function fetchReviews() {
-    return fetch('../../data/reviews.json')
+    return fetch('../../data/myReviews.json')
         .then(response => response.json())
         .catch(error => console.error("Error loading reviews", error));
 }
