@@ -19,9 +19,7 @@ function displayReviews(reviews, containerId, limit=null) {
                 <p>${review.date}</p>
             </div>
             <h3>${review.name}</h3>
-            <div class="wineImageReview">
-                <img src="${review.img}">
-            </div>
+            <img src="${review.img}">
             <div class="wineImageStars">
                 <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
             </div>
