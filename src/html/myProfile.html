@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="../styles/homepage.css">
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/myProfile.css">
+    <!-- Leaflet added for map functionality -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
@@ -44,6 +47,11 @@
                     <p>I love to drink wine because...</p>
                 </div>
             </div>
+        </section>
+
+        <section class="mapSection">
+            <h2>My Wine Map</h2>
+            <div id="map" style="height: 400px; width: 100%; border-radius: 15px; border: 2px solid #800000;"></div>
         </section>
 
         <section class="reviewsSection">
