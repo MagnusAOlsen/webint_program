@@ -1,34 +1,48 @@
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+}
+
 .myProfile {
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .profileHeader {
     display: flex;
-    gap: 40px;
-    align-items: flex-start;
+    gap: 60px;
     margin-bottom: 40px;
-    flex-wrap: wrap;
+    align-items: center; 
+    justify-content: center;
+    padding: 0 50px;
 }
 
-.profile img {
-    width: 180px;
-    height: 180px;
+.profilePicture img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #000;
+    border: 1px solid #000;
 }
+
 
 .bioInfo {
     font-size: 1.2rem;
-    line-height: 1.8;
+    line-height: 2;
 }
 
 .quoteBox {
     flex: 1;
-    min-width: 300px;
-    max-width: 500px;
+    max-width: 450px;
     border: 2px solid #000;
-    padding: 15px;
-    height: 150px;
+    padding: 20px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
 }
 
+.quoteBox h3 {
+    margin-top: 0;
+}
