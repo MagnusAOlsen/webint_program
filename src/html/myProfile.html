@@ -28,7 +28,7 @@
         <h1 class="heading">My Profile</h1>
         <section class="profileHeader">
             <div class="profilePicture">
-                <img src="testImage.png" alt="Profile Picture">
+                <img src="../../images/profile.png" alt="Profile Picture">
             </div>
             
             <div class="bioInfo">
@@ -46,17 +46,15 @@
             </div>
         </section>
 
-        <hr>
-
         <section class="reviewsSection">
-            <a href="reviews.html" class="reviewsLink">My reviews</a>
-            
-            <div class="reviewsGrid">
-
+            <div class="reviewsHeader">
+                <h2 class="sectionHeading">My Most Recent Reviews</h2>
+                <a href="myReviews.html" class="viewAllLink">View all my reviews &rarr;</a>
             </div>
+            <div id="profileReviewsGrid" class="reviewsGrid"></div>
         </section>
-
     </main>
+    <script src="../javascript/myProfile.js"></script>
 </body>
 
 <footer class="footer">
