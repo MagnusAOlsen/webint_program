@@ -1,79 +1,85 @@
-const wines = 
-    [
-    {
-        "id": 1,
-        "name": "Château Montclair",
-        "brand": "Montclair Estates",
-        "year": 2018,
-        "type": "Red",
-        "grape": "Cabernet Sauvignon",
-        "region": "Bordeaux, France",
-        "alcohol_percent": 13.5,
-        "price_eur": 24.99,
-        "image": "to_be_changed.jpg"
-    },
-    {
-        "id": 2,
-        "name": "Verde Alto",
-        "brand": "Casa Verde",
-        "year": 2022,
-        "type": "White",
-        "grape": "Sauvignon Blanc",
-        "region": "Loire Valley, France",
-        "alcohol_percent": 12.0,
-        "price_eur": 14.5,
-        "image": "to_be_changed.jpg"
-    },
-    {
-        "id": 3,
-        "name": "Rosato Sereno",
-        "brand": "Tenuta Sereno",
-        "year": 2021,
-        "type": "Rosé",
-        "grape": "Grenache",
-        "region": "Provence, France",
-        "alcohol_percent": 12.5,
-        "price_eur": 16.0,
-        "image": "to_be_changed.jpg"
-    },
-    {
-        "id": 4,
-        "name": "Barolo Riserva",
-        "brand": "Cantina Alba",
-        "year": 2016,
-        "type": "Red",
-        "grape": "Nebbiolo",
-        "region": "Piedmont, Italy",
-        "alcohol_percent": 14.5,
-        "price_eur": 39.9,
-        "image": "to_be_changed.jpg"
-    },
-    {
-        "id": 5,
-        "name": "Sparkling Luna",
-        "brand": "Luna Vineyards",
-        "year": 2023,
-        "type": "Sparkling",
-        "grape": "Chardonnay / Pinot Noir",
-        "region": "Champagne, France",
-        "alcohol_percent": 11.5,
-        "price_eur": 29.99,
-        "image": "to_be_changed.jpg"
-    },
-    {
-        "id": 6,
-        "name": "Tempranillo Oro",
-        "brand": "Bodega Sol Dorado",
-        "year": 2020,
-        "type": "Red",
-        "grape": "Tempranillo",
-        "region": "Rioja, Spain",
-        "alcohol_percent": 13.8,
-        "price_eur": 18.75,
-        "image": "to_be_changed.jpg"
-    }
+// const wines = 
+//     [
+//     {
+//         "id": 1,
+//         "name": "Château Montclair",
+//         "brand": "Montclair Estates",
+//         "year": 2018,
+//         "type": "Red",
+//         "grape": "Cabernet Sauvignon",
+//         "region": "Bordeaux, France",
+//         "alcohol_percent": 13.5,
+//         "price_eur": 24.99,
+//         "image": "to_be_changed.jpg"
+//     },
+//     {
+//         "id": 2,
+//         "name": "Verde Alto",
+//         "brand": "Casa Verde",
+//         "year": 2022,
+//         "type": "White",
+//         "grape": "Sauvignon Blanc",
+//         "region": "Loire Valley, France",
+//         "alcohol_percent": 12.0,
+//         "price_eur": 14.5,
+//         "image": "to_be_changed.jpg"
+//     },
+//     {
+//         "id": 3,
+//         "name": "Rosato Sereno",
+//         "brand": "Tenuta Sereno",
+//         "year": 2021,
+//         "type": "Rosé",
+//         "grape": "Grenache",
+//         "region": "Provence, France",
+//         "alcohol_percent": 12.5,
+//         "price_eur": 16.0,
+//         "image": "to_be_changed.jpg"
+//     },
+//     {
+//         "id": 4,
+//         "name": "Barolo Riserva",
+//         "brand": "Cantina Alba",
+//         "year": 2016,
+//         "type": "Red",
+//         "grape": "Nebbiolo",
+//         "region": "Piedmont, Italy",
+//         "alcohol_percent": 14.5,
+//         "price_eur": 39.9,
+//         "image": "to_be_changed.jpg"
+//     },
+//     {
+//         "id": 5,
+//         "name": "Sparkling Luna",
+//         "brand": "Luna Vineyards",
+//         "year": 2023,
+//         "type": "Sparkling",
+//         "grape": "Chardonnay / Pinot Noir",
+//         "region": "Champagne, France",
+//         "alcohol_percent": 11.5,
+//         "price_eur": 29.99,
+//         "image": "to_be_changed.jpg"
+//     },
+//     {
+//         "id": 6,
+//         "name": "Tempranillo Oro",
+//         "brand": "Bodega Sol Dorado",
+//         "year": 2020,
+//         "type": "Red",
+//         "grape": "Tempranillo",
+//         "region": "Rioja, Spain",
+//         "alcohol_percent": 13.8,
+//         "price_eur": 18.75,
+//         "image": "to_be_changed.jpg"
+//     }
 
-];
+// ];
+
+let wines = [];
+
+async function loadWines() {
+    const response = await fetch("../../data/reviews.json");
+}
 
 
 function displayWines(wines) {
