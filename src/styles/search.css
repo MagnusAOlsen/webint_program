@@ -1,3 +1,9 @@
+.mainPage {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
 .findWinesInformation {
     display: flex;
     flex-direction: column;
@@ -58,6 +64,11 @@
 }
 
 .searchPage {
+    flex: 0 0 600px;
+    position: sticky;
+    top: 90px; 
+    align-self: flex-start;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -68,3 +79,8 @@
     margin-bottom: 20px;
     color: #555;
 }
+
+.resultClassSection {
+    flex: 1;
+}
+ 
