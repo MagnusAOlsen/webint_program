@@ -38,6 +38,12 @@
     text-align: center;
 }
 
+.wineTypeSelection {
+    width: 95.5%;
+    height: 25px;
+}
+
+
 .wineCard {
     border: 2px solid #9c0909;
     border-radius: 8px;
