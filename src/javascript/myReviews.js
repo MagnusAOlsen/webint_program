@@ -1,3 +1,20 @@
+fetchReviews().then(reviews => {
+
+  reviews.sort((a, b) => {
+      const dateA = convertDate(a.date);
+      const dateB = convertDate(b.date);
+      return dateB - dateA; 
+  });
+
+  displayReviews(reviews, '#wineBoxes');
+});
+
+function convertDate(dateString) {
+  const [day, month, year] = dateString.split('.');
+  return new Date(`${year}-${month}-${day}`);
+}
+
+
 const stars = document.querySelectorAll('.star');
 
 stars.forEach(s => {
@@ -27,3 +44,4 @@ addWineBtn.addEventListener('click', () => {
     form.classList.toggle('hidden');
     backdrop.classList.toggle('hidden');
 });
+
