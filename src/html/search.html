@@ -72,22 +72,31 @@
                 <button class="primaryButton" type="submit">
                     Search
                 </button>
-                <button class="primaryButton" type="button" id="showAllButton" style="max-width: 100px; background-color: rgb(0, 0, 0);">
+                <button class="primaryButton" type="button" id="showAllButton">
                     Display All
                 </button>
             </form>
         </main>
         <div class="resultsSection">
-                <h2 style="margin: 20px;">Results</h2>
-                <div class="wineResults">
+            <div class="resultsSectionHeader">
+                <h2>Results</h2>
+                <div class="sortWrapper">
+                    <button class="sortButton" id="sortButton" title="Sort results">&#8645;</button>
+                    <div class="sortDropdown" id="sortDropdown">
+                        <button class="sortOption" data-sort="name-asc">Name A &#8594; Z</button>
+                        <button class="sortOption" data-sort="name-desc">Name Z &#8594; A</button>
+                        <button class="sortOption" data-sort="price-asc">Price Low &#8594; High</button>
+                        <button class="sortOption" data-sort="price-desc">Price High &#8594; Low</button>
+                    </div>
                 </div>
-
+            </div>
+            <div class="wineResults">
+            </div>
         </div>
     </div>
     <script src="../javascript/search.js"></script>
-
+    
+    <footer class="footer">
+        <p>© 2026 WineLover</p>
+    </footer>
 </body>
-
-<footer class="footer">
-    <p>© 2026 WineLover</p>
-</footer>

@@ -1,4 +1,6 @@
 let wines = [];
+let currentResults = [];
+let currentSort = null;
 
 async function loadWines() {
     try {
@@ -25,14 +27,19 @@ function displayWines(winesToDisplay) {
         card.classList.add("wineCard");
 
         card.innerHTML = `
+            <img src="${wine.img}" alt="${wine.name}" class="wineCardImage">
             <h3>${wine.name}</h3>
-            <p>${wine.year} - ${wine.region}</p>
+            <p>${wine.year} - ${wine.location}</p>
             <p>${wine.grape}</p>
-            <p>${wine.price_eur} €</p>
+            <p>${wine.price}</p>
         `;
 
         container.appendChild(card);
     });
+}
+
+function parsePrice(priceStr) {
+    return parseFloat(String(priceStr).replace(/[^0-9.]/g, ""));
 }
 
 function filterWines(wine, criteria) {
@@ -45,11 +52,24 @@ function filterWines(wine, criteria) {
     const grapeFilter = !criteria.grape ||
         wine.grape.toLowerCase().includes(criteria.grape.toLowerCase());
 
-    const regionFilter = !criteria.location ||
-        wine.region.toLowerCase().includes(criteria.location.toLowerCase());
+    const locationFilter = !criteria.location ||
+        wine.location.toLowerCase().includes(criteria.location.toLowerCase());
 
+    const typeFilter = !criteria.type ||
+        wine.color.toLowerCase() === criteria.type.toLowerCase();
 
-    return nameFilter && yearFilter && grapeFilter && regionFilter;
+    let priceFilter = true;
+    if (criteria.price) {
+        const target = parsePrice(criteria.price);
+        const winePrice = parsePrice(wine.price);
+        if (!isNaN(target) && !isNaN(winePrice)) {
+            priceFilter = winePrice >= target * 0.8 && winePrice <= target * 1.2;
+        }
+    }
+
+    const keywordFilter = doesWineMatchKeywords(wine, criteria.keywords);
+
+    return nameFilter && yearFilter && grapeFilter && locationFilter && typeFilter && priceFilter && keywordFilter;
 }
 
 function doesWineMatchKeywords(wine, keywords) {
@@ -61,10 +81,11 @@ function doesWineMatchKeywords(wine, keywords) {
 
     const wineText = [
         wine.name,
-        wine.brand,
-        wine.type,
+        wine.color,
         wine.grape,
-        wine.region,
+        wine.location,
+        wine.description,
+        Array.isArray(wine.keywords) ? wine.keywords.join(" ") : "",
         String(wine.year)
     ].join(" ").toLowerCase();
 
@@ -77,7 +98,9 @@ function getCriteriaFromInputs() {
         name: document.getElementById("wine-name").value,
         year: document.getElementById("wine-year").value,
         grape: document.getElementById("wine-grape").value,
+        type: document.getElementById("wine-type").value,
         location: document.getElementById("wine-location").value,
+        price: document.getElementById("wine-price").value,
         keywords: document.getElementById("wine-keywords").value
     };
 }
@@ -86,23 +109,27 @@ function fillInputs(criteria) {
     document.getElementById("wine-name").value = criteria.name || "";
     document.getElementById("wine-year").value = criteria.year || "";
     document.getElementById("wine-grape").value = criteria.grape || "";
+    document.getElementById("wine-type").value = criteria.type || "";
     document.getElementById("wine-location").value = criteria.location || "";
+    document.getElementById("wine-price").value = criteria.price || "";
     document.getElementById("wine-keywords").value = criteria.keywords || "";
 }
 
-function searchWines(criteria) {
-    let filtered = wines.filter(wine => filterWines(wine, criteria));
-
-    if (filtered.length === 0 && criteria.keywords) {
-        filtered = wines.filter(wine => 
-            doesWineMatchKeywords(wine, criteria.keywords)
-        );
-    }
-
-    displayWines(filtered);
+function sortWines(list, sortType) {
+    const sorted = [...list];
+    if (sortType === "name-asc") sorted.sort((a, b) => a.name.localeCompare(b.name));
+    else if (sortType === "name-desc") sorted.sort((a, b) => b.name.localeCompare(a.name));
+    else if (sortType === "price-asc") sorted.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+    else if (sortType === "price-desc") sorted.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+    return sorted;
 }
 
-/* 
+function searchWines(criteria) {
+    currentResults = wines.filter(wine => filterWines(wine, criteria));
+    displayWines(sortWines(currentResults, currentSort));
+}
+
+/*
     This code handles 2 cases:
     - case 1: when the search comes from homepage, we get the parameters from the URL
               and apply the filter, then show the results
@@ -124,7 +151,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             name: params.get("Name") || "",
             year: params.get("Year") || "",
             grape: params.get("Grape") || "",
+            type: params.get("Type") || "",
             location: params.get("Location") || "",
+            price: params.get("Price") || "",
             keywords: params.get("Keywords") || ""
         };
 
@@ -141,7 +170,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         fillInputs(criteria);
         searchWines(criteria);
     } else {
-        displayWines(wines);
+        currentResults = wines;
+        displayWines(sortWines(currentResults, currentSort));
     }
 
     if (form) {
@@ -159,8 +189,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         showAllButton.addEventListener("click", () => {
             localStorage.removeItem("lastSearch");
             form.reset();
-            displayWines(wines);
+            currentResults = wines;
+            displayWines(sortWines(currentResults, currentSort));
         });
     }
-});
 
+    const sortButton = document.getElementById("sortButton");
+    const sortDropdown = document.getElementById("sortDropdown");
+
+    sortButton.addEventListener("click", e => {
+        e.stopPropagation();
+        sortDropdown.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+        sortDropdown.classList.remove("open");
+    });
+
+    document.querySelectorAll(".sortOption").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const chosen = btn.dataset.sort;
+            currentSort = (currentSort === chosen) ? null : chosen;
+
+            document.querySelectorAll(".sortOption").forEach(b => b.classList.remove("active"));
+            if (currentSort) btn.classList.add("active");
+
+            sortDropdown.classList.remove("open");
+            displayWines(sortWines(currentResults, currentSort));
+        });
+    });
+});
