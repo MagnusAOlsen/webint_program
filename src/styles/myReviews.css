@@ -137,12 +137,20 @@ button:hover {
     width: 90%;
 }
 
-.star { 
-    color: gray; 
+.star {
+    color: gray;
     font-size: 28px;
     transition: color 0.15s;
+    cursor: pointer;
+    user-select: none;
 }
 .star.lit { color: #f5a623; }
+.star.halfLit {
+    background: linear-gradient(90deg, #f5a623 50%, gray 50%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
 .stars {
     display: flex;
     flex-direction: row;
@@ -165,19 +173,24 @@ button:hover {
     min-width: 300px;
   }
 
-  #searchWine input {
+  #searchWine input,
+  #searchWine textarea {
     padding: 0.6rem 0.8rem;
     border: 1.5px solid #9c0909;
     border-radius: 8px;
     font-size: 14px;
     outline: none;
     color: #333;
+    font-family: inherit;
+    resize: vertical;
   }
-  #searchWine input:focus {
+  #searchWine input:focus,
+  #searchWine textarea:focus {
     border-color: #6b0606;
     box-shadow: 0 0 0 3px rgba(156, 9, 9, 0.15);
   }
-  #searchWine input::placeholder {
+  #searchWine input::placeholder,
+  #searchWine textarea::placeholder {
     color: #aaa;
   }
 
@@ -189,6 +202,15 @@ background: rgba(0, 0, 0, 0.4);
 z-index: 99;
 }
 
-.hidden { 
-    display: none !important; 
+.hidden {
+    display: none !important;
 }
+
+.fileField {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 13px;
+    color: #555;
+}
+
