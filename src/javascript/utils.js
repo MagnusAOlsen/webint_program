@@ -13,17 +13,19 @@ function displayReviews(reviews, containerId, limit=null) {
     reviewsToShow.forEach(review => {
         const wineDiv = document.createElement('div');
         wineDiv.className = 'wine';
+        const keywords = Array.isArray(review.keywords) ? review.keywords.join(', ') : '';
         wineDiv.innerHTML = `
             <div class="placeYearDate">
                 <p>${review.year}, ${review.location}</p>
                 <p>${review.date}</p>
             </div>
             <h3>${review.name}</h3>
-            <img src="${review.img}">
+            <img class="wineCardImage" src="${review.img}">
             <div class="wineImageStars">
                 <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
             </div>
-            <p>${review.description}</p>
+            <p class="wineKeywords">${keywords}</p>
+            <p class="wineDescription">${review.description}</p>
         `;
         
         container.appendChild(wineDiv);
