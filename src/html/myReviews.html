@@ -26,10 +26,10 @@
             </div>
             <div id="backdrop" class="hidden"></div>
             <form id="searchWine" class="hidden">
-                <input type="text" id="nameOfWine" placeholder="Name of the wine">
+                <input type="text" id="nameOfWine" placeholder="Name of the wine" required>
                 <input type="text" id="location" placeholder="Location (country, city)">
-                <input type="text" id="year" placeholder="year (ex: 2021)">
-                <div id="stars" class="stars">
+                <input type="number" id="year" placeholder="year (ex: 2021)">
+                <div id="stars" class="stars" data-rating="0">
                     <span class="star" data-val="1">★</span>
                     <span class="star" data-val="2">★</span>
                     <span class="star" data-val="3">★</span>
@@ -37,7 +37,13 @@
                     <span class="star" data-val="5">★</span>
                 </div>
                 <input type="text" id="keywords" placeholder="Keywords (separate with comma)">
-                <input type="text" id="food" placeholder="Food to match the wine"> 
+                <input type="text" id="food" placeholder="Food to match the wine">
+                <textarea id="description" placeholder="Your review" rows="3"></textarea>
+                <label id="imageLabel" class="fileField">
+                    Picture of the wine
+                    <input type="file" id="addImage" accept="image/*">
+                </label>
+                <button type="submit" class="addWineButton">Save review</button>
             </form>
             <div class="fullReview">
                 <div class="reviewHeader">
