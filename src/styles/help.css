@@ -1,0 +1,40 @@
+.welcomeText {
+    font-size: large;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.navigationRow {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+.navigationBox {
+    width: 300px;
+    height: 250px;
+    padding: 20px;
+    background-color: #9c0909;
+    color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.navigationH3 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.tipsHelp {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+}
+
+
+
+
