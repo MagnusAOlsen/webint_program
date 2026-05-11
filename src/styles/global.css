@@ -69,4 +69,34 @@ body {
     padding: 20px 0;
 }
 
+/* Shared wine-card sizing — used by both homepage and myReviews via displayReviews() in utils.js */
+.wine .wineCardImage {
+    width: auto;
+    max-width: 80%;
+    height: 140px;
+    object-fit: contain;
+    display: block;
+    margin: 0.5rem auto;
+}
+
+.wine .wineImageStars img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0.3rem auto;
+}
+
+.wineKeywords {
+    font-style: italic;
+    color: #666;
+    margin: 0.2rem 0;
+    text-align: center;
+}
+
+.wineDescription {
+    text-align: center;
+    margin: 0.4rem 0 0;
+    max-width: 90%;
+}
+
 

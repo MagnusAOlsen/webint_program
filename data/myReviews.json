@@ -10,7 +10,10 @@
     "rating": 4.5,
     "date": "17.01.2026",
     "description": "Legendary Bordeaux with elegance and depth.",
-    "keywords": ["bold", "complex"],
+    "keywords": [
+      "bold",
+      "complex"
+    ],
     "img": "../../images/wines/chateauMargaux.png"
   },
   {
@@ -24,7 +27,10 @@
     "rating": 3,
     "date": "20.01.2026",
     "description": "Iconic Super Tuscan with rich structure.",
-    "keywords": ["rich", "structured"],
+    "keywords": [
+      "rich",
+      "structured"
+    ],
     "img": "../../images/wines/tignanello.png"
   },
   {
@@ -38,7 +44,10 @@
     "rating": 5,
     "date": "22.01.2026",
     "description": "Powerful and age-worthy Australian wine.",
-    "keywords": ["bold", "intense"],
+    "keywords": [
+      "bold",
+      "intense"
+    ],
     "img": "../../images/wines/penfolds.png"
   },
   {
@@ -52,7 +61,10 @@
     "rating": 5,
     "date": "25.01.2026",
     "description": "Spain’s most prestigious red wine.",
-    "keywords": ["complex", "long finish"],
+    "keywords": [
+      "complex",
+      "long finish"
+    ],
     "img": "../../images/wines/vegaSicilia.png"
   },
   {
@@ -66,7 +78,10 @@
     "rating": 5,
     "date": "28.01.2026",
     "description": "Luxury Napa blend with smooth tannins.",
-    "keywords": ["luxury", "smooth"],
+    "keywords": [
+      "luxury",
+      "smooth"
+    ],
     "img": "../../images/wines/opusOne.png"
   },
   {
@@ -80,7 +95,10 @@
     "rating": 4,
     "date": "30.01.2026",
     "description": "Elegant and approachable Burgundy.",
-    "keywords": ["light", "elegant"],
+    "keywords": [
+      "light",
+      "elegant"
+    ],
     "img": "../../images/wines/louisJadot.png"
   },
   {
@@ -94,7 +112,10 @@
     "rating": 4,
     "date": "02.02.2026",
     "description": "Rich and fruity Argentine classic.",
-    "keywords": ["fruity", "bold"],
+    "keywords": [
+      "fruity",
+      "bold"
+    ],
     "img": "../../images/wines/catenaMalbec.png"
   },
   {
@@ -108,7 +129,10 @@
     "rating": 4,
     "date": "05.02.2026",
     "description": "Spicy and smooth everyday wine.",
-    "keywords": ["spicy", "smooth"],
+    "keywords": [
+      "spicy",
+      "smooth"
+    ],
     "img": "../../images/wines/gigondas.png"
   },
   {
@@ -122,7 +146,10 @@
     "rating": 4,
     "date": "07.02.2026",
     "description": "Famous fresh and elegant rosé.",
-    "keywords": ["fresh", "light"],
+    "keywords": [
+      "fresh",
+      "light"
+    ],
     "img": "../../images/wines/whisperingAngel.png"
   },
   {
@@ -136,7 +163,10 @@
     "rating": 4,
     "date": "10.02.2026",
     "description": "Celebrity rosé with crisp flavors.",
-    "keywords": ["crisp", "fresh"],
+    "keywords": [
+      "crisp",
+      "fresh"
+    ],
     "img": "../../images/wines/miraval.png"
   },
   {
@@ -150,7 +180,10 @@
     "rating": 5,
     "date": "12.02.2026",
     "description": "Premium rosé with structure and finesse.",
-    "keywords": ["elegant", "premium"],
+    "keywords": [
+      "elegant",
+      "premium"
+    ],
     "img": "../../images/wines/chateauDeSelle.png"
   },
   {
@@ -164,7 +197,10 @@
     "rating": 5,
     "date": "15.02.2026",
     "description": "Zesty and iconic Sauvignon Blanc.",
-    "keywords": ["zesty", "fresh"],
+    "keywords": [
+      "zesty",
+      "fresh"
+    ],
     "img": "../../images/wines/cloudyBay.png"
   },
   {
@@ -178,7 +214,10 @@
     "rating": 4,
     "date": "18.02.2026",
     "description": "Mineral-driven and crisp Chardonnay.",
-    "keywords": ["mineral", "crisp"],
+    "keywords": [
+      "mineral",
+      "crisp"
+    ],
     "img": "../../images/wines/louisLatour.png"
   },
   {
@@ -192,7 +231,10 @@
     "rating": 5,
     "date": "20.02.2026",
     "description": "Sweet with perfect acidity balance.",
-    "keywords": ["sweet", "balanced"],
+    "keywords": [
+      "sweet",
+      "balanced"
+    ],
     "img": "../../images/wines/drLoosen.png"
   },
   {
@@ -206,7 +248,10 @@
     "rating": 4,
     "date": "22.02.2026",
     "description": "Clean and refreshing Italian white.",
-    "keywords": ["light", "fresh"],
+    "keywords": [
+      "light",
+      "fresh"
+    ],
     "img": "../../images/wines/santaMargherita.png"
   },
   {
@@ -220,7 +265,10 @@
     "rating": 4,
     "date": "25.02.2026",
     "description": "Aromatic and slightly spicy.",
-    "keywords": ["aromatic", "spicy"],
+    "keywords": [
+      "aromatic",
+      "spicy"
+    ],
     "img": "../../images/wines/trimbach.png"
   },
   {
@@ -234,7 +282,10 @@
     "rating": 4,
     "date": "28.02.2026",
     "description": "Balanced with tropical fruit notes.",
-    "keywords": ["tropical", "smooth"],
+    "keywords": [
+      "tropical",
+      "smooth"
+    ],
     "img": "../../images/wines/concha.png"
   },
   {
@@ -248,7 +299,10 @@
     "rating": 4,
     "date": "02.03.2026",
     "description": "Fresh citrus and mineral profile.",
-    "keywords": ["citrus", "fresh"],
+    "keywords": [
+      "citrus",
+      "fresh"
+    ],
     "img": "../../images/wines/torresAlbarino.png"
   },
   {
@@ -262,7 +316,10 @@
     "rating": 4,
     "date": "05.03.2026",
     "description": "Refined rosé with depth.",
-    "keywords": ["elegant", "refined"],
+    "keywords": [
+      "elegant",
+      "refined"
+    ],
     "img": "../../images/wines/rockAngel.png"
   },
   {
@@ -276,7 +333,44 @@
     "rating": 5,
     "date": "08.03.2026",
     "description": "Rich Napa Cabernet with long finish.",
-    "keywords": ["bold", "structured"],
+    "keywords": [
+      "bold",
+      "structured"
+    ],
     "img": "../../images/wines/beringer.png"
+  },
+  {
+    "id": 21,
+    "name": "McGuigan",
+    "grape": "",
+    "color": "",
+    "price": "",
+    "year": 2026,
+    "location": "Australia",
+    "rating": 0.5,
+    "date": "08.05.2026",
+    "description": "No buz, drank 8 bottles without feeling a thing. Don't recommend",
+    "keywords": [
+      "Bad",
+      "worse"
+    ],
+    "img": "../../images/wines/mcguigan.webp"
+  },
+  {
+    "id": 22,
+    "name": "Chateaudefrance",
+    "grape": "",
+    "color": "",
+    "price": "",
+    "year": 2001,
+    "location": "France",
+    "rating": 4,
+    "date": "08.05.2026",
+    "description": "Very good, fruity wine!",
+    "keywords": [
+      "Cheese",
+      "Pepsi max"
+    ],
+    "img": "../../images/wines/chateaudefrance.webp"
   }
 ]
