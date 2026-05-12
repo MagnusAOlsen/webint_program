@@ -2,6 +2,7 @@ let wines = [];
 let currentResults = [];
 let currentSort = null;
 
+
 async function loadWines() {
     try {
         const response = await fetch("../../data/wineReviews.json");
@@ -24,25 +25,29 @@ function displayWines(winesToDisplay) {
     displayReviews(winesToDisplay, ".wineResults");
 }
 
+function normalize(str) {
+    return String(str ?? "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+}
+
 function parsePrice(priceStr) {
     return parseFloat(String(priceStr).replace(/[^0-9.]/g, ""));
 }
 
 function filterWines(wine, criteria) {
     const nameFilter = !criteria.name ||
-        wine.name.toLowerCase().includes(criteria.name.toLowerCase());
+        normalize(wine.name).includes(normalize(criteria.name));
 
     const yearFilter = !criteria.year ||
         wine.year == criteria.year;
 
     const grapeFilter = !criteria.grape ||
-        wine.grape.toLowerCase().includes(criteria.grape.toLowerCase());
+        normalize(wine.grape).includes(normalize(criteria.grape));
 
     const locationFilter = !criteria.location ||
-        wine.location.toLowerCase().includes(criteria.location.toLowerCase());
+        normalize(wine.location).includes(normalize(criteria.location));
 
     const typeFilter = !criteria.type ||
-        wine.color.toLowerCase() === criteria.type.toLowerCase();
+        normalize(wine.color) === normalize(criteria.type);
 
     let priceFilter = true;
     if (criteria.price) {
@@ -59,13 +64,13 @@ function filterWines(wine, criteria) {
 }
 
 function doesWineMatchKeywords(wine, keywords) {
-    const words = (keywords || "").trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const words = (keywords || "").trim().split(/\s+/).filter(Boolean).map(normalize);
 
     if (words.length === 0) {
         return true;
     }
 
-    const wineText = [
+    const wineText = normalize([
         wine.name,
         wine.color,
         wine.grape,
@@ -73,7 +78,7 @@ function doesWineMatchKeywords(wine, keywords) {
         wine.description,
         Array.isArray(wine.keywords) ? wine.keywords.join(" ") : "",
         String(wine.year)
-    ].join(" ").toLowerCase();
+    ].join(" "));
 
     return words.some(word => wineText.includes(word));
 }
