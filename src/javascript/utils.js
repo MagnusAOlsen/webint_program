@@ -4,6 +4,12 @@ function fetchReviews() {
         .catch(error => console.error("Error loading reviews", error));
 }
 
+function fetchSearchReviews() {
+    return fetch('../../data/wineReviews.json')
+        .then(response => response.json())
+        .catch(error => console.error("Error loading wine reviews", error));
+}
+
 function displayReviews(reviews, containerId, limit=null) {
     const container = document.querySelector(containerId);
     container.innerHTML = '';

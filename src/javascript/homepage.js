@@ -9,13 +9,16 @@ fetchReviews().then(reviews => {
         const dateB = convertDate(b.date);
         return dateB - dateA; 
     });
-
-    wineOfTheDay = reviews.find(u => u.id === x);
-
+    
     displayReviews(reviews, '#wineReviewImages', 4);
 
-    displayWineOfTheDay(getTodayString(), reviews);
 });
+
+fetchSearchReviews().then(searchReviews => {
+
+    wineOfTheDay = searchReviews.find(u => u.id === x);
+    displayWineOfTheDay(getTodayString(), searchReviews);
+})
 
 function convertDate(dateString) {
     const [day, month, year] = dateString.split('.');
