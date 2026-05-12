@@ -10,6 +10,60 @@ function fetchSearchReviews() {
         .catch(error => console.error("Error loading wine reviews", error));
 }
 
+function ensureFullWineModal() {
+    if (!document.getElementById('backdrop')) {
+        const b = document.createElement('div');
+        b.id = 'backdrop';
+        b.className = 'hidden';
+        document.body.appendChild(b);
+    }
+    if (!document.getElementById('fullWine')) {
+        const f = document.createElement('div');
+        f.id = 'fullWine';
+        f.className = 'fullWine hidden';
+        document.body.appendChild(f);
+    }
+    const backdrop = document.getElementById('backdrop');
+    if (!backdrop.dataset.fullWineBound) {
+        backdrop.addEventListener('click', hideFullWine);
+        backdrop.dataset.fullWineBound = '1';
+    }
+}
+
+function showFullWine(review) {
+    ensureFullWineModal();
+    const fullWine = document.getElementById('fullWine');
+    const backdrop = document.getElementById('backdrop');
+    const keywords = Array.isArray(review.keywords) ? review.keywords.join(', ') : (review.keywords || '');
+    const food = Array.isArray(review.food) ? review.food.join(', ') : (review.food || '');
+    fullWine.innerHTML = `
+        <div class="placeYearDate">
+            <p>${review.year}, ${review.location}</p>
+            <p>${review.date}</p>
+        </div>
+        <h2>${review.name}</h2>
+        <img class="wineCardImage" src="${review.img}">
+        <div class="wineImageStars">
+            <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
+        </div>
+        <p><strong>Grape:</strong> ${review.grape || ''}</p>
+        <p><strong>Color:</strong> ${review.color || ''}</p>
+        <p><strong>Price:</strong> ${review.price || ''}</p>
+        <p><strong>Keywords:</strong> ${keywords}</p>
+        <p><strong>Food pairing:</strong> ${food}</p>
+        <p>${review.description || ''}</p>
+    `;
+    fullWine.classList.remove('hidden');
+    backdrop.classList.remove('hidden');
+}
+
+function hideFullWine() {
+    const fullWine = document.getElementById('fullWine');
+    const backdrop = document.getElementById('backdrop');
+    if (fullWine) fullWine.classList.add('hidden');
+    if (backdrop) backdrop.classList.add('hidden');
+}
+
 function displayReviews(reviews, containerId, limit=null) {
     const container = document.querySelector(containerId);
     container.innerHTML = '';
@@ -33,7 +87,7 @@ function displayReviews(reviews, containerId, limit=null) {
             <p class="wineKeywords">${keywords}</p>
             <p class="wineDescription">${review.description}</p>
         `;
-        
+        wineDiv.addEventListener('click', () => showFullWine(review));
         container.appendChild(wineDiv);
     })
 }

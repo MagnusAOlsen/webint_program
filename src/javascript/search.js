@@ -15,27 +15,13 @@ async function loadWines() {
 
 function displayWines(winesToDisplay) {
     const container = document.querySelector(".wineResults");
-    container.innerHTML = "";
 
     if (winesToDisplay.length === 0) {
         container.innerHTML = "<p>No wines found.</p>";
         return;
     }
 
-    winesToDisplay.forEach(wine => {
-        const card = document.createElement("div");
-        card.classList.add("wineCard");
-
-        card.innerHTML = `
-            <img src="${wine.img}" alt="${wine.name}" class="wineCardImage">
-            <h3>${wine.name}</h3>
-            <p>${wine.year} - ${wine.location}</p>
-            <p>${wine.grape}</p>
-            <p>${wine.price}</p>
-        `;
-
-        container.appendChild(card);
-    });
+    displayReviews(winesToDisplay, ".wineResults");
 }
 
 function parsePrice(priceStr) {

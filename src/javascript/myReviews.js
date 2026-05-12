@@ -35,11 +35,7 @@ function applyFilter(reviews, c) {
 }
 
 function render() {
-  const filtered = applyFilter(allReviews, activeFilter);
-  displayReviews(filtered, '#wineBoxes');
-  document.querySelectorAll('#wineBoxes .wine').forEach((box, i) => {
-    box.addEventListener('click', () => showFullWine(filtered[i]));
-  });
+  displayReviews(applyFilter(allReviews, activeFilter), '#wineBoxes');
 }
 
 async function loadAndRender() {
@@ -83,7 +79,6 @@ stars.forEach(s => {
 
 const form = document.getElementById('searchWine');
 const backdrop = document.getElementById('backdrop');
-const fullWine = document.getElementById('fullWine');
 const filterBtn = document.getElementById('filterButton');
 const addWineBtn = document.getElementById('addWineButton');
 const submitBtn = form.querySelector('button[type="submit"]');
@@ -177,41 +172,9 @@ function hideForm() {
   backdrop.classList.add('hidden');
 }
 
-function showFullWine(review) {
-  const keywords = Array.isArray(review.keywords) ? review.keywords.join(', ') : (review.keywords || '');
-  const food = Array.isArray(review.food) ? review.food.join(', ') : (review.food || '');
-  fullWine.innerHTML = `
-    <div class="placeYearDate">
-      <p>${review.year}, ${review.location}</p>
-      <p>${review.date}</p>
-    </div>
-    <h2>${review.name}</h2>
-    <img class="wineCardImage" src="${review.img}">
-    <div class="wineImageStars">
-      <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
-    </div>
-    <p><strong>Grape:</strong> ${review.grape || ''}</p>
-    <p><strong>Color:</strong> ${review.color || ''}</p>
-    <p><strong>Price:</strong> ${review.price || ''}</p>
-    <p><strong>Keywords:</strong> ${keywords}</p>
-    <p><strong>Food pairing:</strong> ${food}</p>
-    <p>${review.description || ''}</p>
-  `;
-  fullWine.classList.remove('hidden');
-  backdrop.classList.remove('hidden');
-}
-
-function hideFullWine() {
-  fullWine.classList.add('hidden');
-  backdrop.classList.add('hidden');
-}
-
 filterBtn.addEventListener('click', () => showForm('filter'));
 addWineBtn.addEventListener('click', () => showForm('add'));
-backdrop.addEventListener('click', () => {
-  hideForm();
-  hideFullWine();
-});
+backdrop.addEventListener('click', hideForm);
 
 function hasFiles(e) {
   return e.dataTransfer && Array.from(e.dataTransfer.types || []).includes('Files');
