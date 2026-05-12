@@ -34,6 +34,7 @@
 
 .myWinesButton {
     padding: 4px;
+    cursor: pointer;
 }
 
 .myWinesButton h1 {

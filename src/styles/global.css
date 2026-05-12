@@ -35,6 +35,7 @@ body {
     color: #ffffff;
     font-size: larger;
     font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
 }
 
 .menuButton:hover {
@@ -52,6 +53,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .primaryButton:hover {
@@ -99,4 +101,6 @@ body {
     max-width: 90%;
 }
 
-
+.siteTitle{
+    cursor: pointer;
+}
