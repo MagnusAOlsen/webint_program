@@ -14,7 +14,8 @@
       "bold",
       "complex"
     ],
-    "img": "../../images/wines/chateauMargaux.png"
+    "img": "../../images/wines/chateauMargaux.png",
+    "food": ["Lamb", "Aged cheese"]
   },
   {
     "id": 2,
@@ -31,7 +32,8 @@
       "rich",
       "structured"
     ],
-    "img": "../../images/wines/tignanello.png"
+    "img": "../../images/wines/tignanello.png",
+    "food": ["Pasta bolognese", "Grilled steak"]
   },
   {
     "id": 3,
@@ -48,7 +50,8 @@
       "bold",
       "intense"
     ],
-    "img": "../../images/wines/penfolds.png"
+    "img": "../../images/wines/penfolds.png",
+    "food": ["BBQ ribs", "Grilled steak"]
   },
   {
     "id": 4,
@@ -65,7 +68,8 @@
       "complex",
       "long finish"
     ],
-    "img": "../../images/wines/vegaSicilia.png"
+    "img": "../../images/wines/vegaSicilia.png",
+    "food": ["Roast lamb", "Manchego cheese"]
   },
   {
     "id": 5,
@@ -82,7 +86,8 @@
       "luxury",
       "smooth"
     ],
-    "img": "../../images/wines/opusOne.png"
+    "img": "../../images/wines/opusOne.png",
+    "food": ["Ribeye steak", "Lamb chops"]
   },
   {
     "id": 6,
@@ -99,7 +104,8 @@
       "light",
       "elegant"
     ],
-    "img": "../../images/wines/louisJadot.png"
+    "img": "../../images/wines/louisJadot.png",
+    "food": ["Duck breast", "Mushroom risotto"]
   },
   {
     "id": 7,
@@ -116,7 +122,8 @@
       "fruity",
       "bold"
     ],
-    "img": "../../images/wines/catenaMalbec.png"
+    "img": "../../images/wines/catenaMalbec.png",
+    "food": ["Argentinian steak", "Empanadas"]
   },
   {
     "id": 8,
@@ -133,7 +140,8 @@
       "spicy",
       "smooth"
     ],
-    "img": "../../images/wines/gigondas.png"
+    "img": "../../images/wines/gigondas.png",
+    "food": ["Roast lamb", "Sausages"]
   },
   {
     "id": 9,
@@ -150,7 +158,8 @@
       "fresh",
       "light"
     ],
-    "img": "../../images/wines/whisperingAngel.png"
+    "img": "../../images/wines/whisperingAngel.png",
+    "food": ["Salade niçoise", "Grilled shrimp"]
   },
   {
     "id": 10,
@@ -167,7 +176,8 @@
       "crisp",
       "fresh"
     ],
-    "img": "../../images/wines/miraval.png"
+    "img": "../../images/wines/miraval.png",
+    "food": ["Grilled fish", "Caprese salad"]
   },
   {
     "id": 11,
@@ -184,7 +194,8 @@
       "elegant",
       "premium"
     ],
-    "img": "../../images/wines/chateauDeSelle.png"
+    "img": "../../images/wines/chateauDeSelle.png",
+    "food": ["Bouillabaisse", "Grilled seafood"]
   },
   {
     "id": 12,
@@ -201,7 +212,8 @@
       "zesty",
       "fresh"
     ],
-    "img": "../../images/wines/cloudyBay.png"
+    "img": "../../images/wines/cloudyBay.png",
+    "food": ["Oysters", "Goat cheese"]
   },
   {
     "id": 13,
@@ -218,7 +230,8 @@
       "mineral",
       "crisp"
     ],
-    "img": "../../images/wines/louisLatour.png"
+    "img": "../../images/wines/louisLatour.png",
+    "food": ["Oysters", "Shellfish"]
   },
   {
     "id": 14,
@@ -235,7 +248,8 @@
       "sweet",
       "balanced"
     ],
-    "img": "../../images/wines/drLoosen.png"
+    "img": "../../images/wines/drLoosen.png",
+    "food": ["Thai curry", "Pork belly"]
   },
   {
     "id": 15,
@@ -252,7 +266,8 @@
       "light",
       "fresh"
     ],
-    "img": "../../images/wines/santaMargherita.png"
+    "img": "../../images/wines/santaMargherita.png",
+    "food": ["Light pasta", "Seafood risotto"]
   },
   {
     "id": 16,
@@ -269,7 +284,8 @@
       "aromatic",
       "spicy"
     ],
-    "img": "../../images/wines/trimbach.png"
+    "img": "../../images/wines/trimbach.png",
+    "food": ["Spicy Asian food", "Foie gras"]
   },
   {
     "id": 17,
@@ -286,7 +302,8 @@
       "tropical",
       "smooth"
     ],
-    "img": "../../images/wines/concha.png"
+    "img": "../../images/wines/concha.png",
+    "food": ["Roast chicken", "Creamy pasta"]
   },
   {
     "id": 18,
@@ -303,7 +320,8 @@
       "citrus",
       "fresh"
     ],
-    "img": "../../images/wines/torresAlbarino.png"
+    "img": "../../images/wines/torresAlbarino.png",
+    "food": ["Paella", "Grilled seafood"]
   },
   {
     "id": 19,
@@ -320,7 +338,8 @@
       "elegant",
       "refined"
     ],
-    "img": "../../images/wines/rockAngel.png"
+    "img": "../../images/wines/rockAngel.png",
+    "food": ["Grilled tuna", "Mediterranean salad"]
   },
   {
     "id": 20,
@@ -337,7 +356,8 @@
       "bold",
       "structured"
     ],
-    "img": "../../images/wines/beringer.png"
+    "img": "../../images/wines/beringer.png",
+    "food": ["Grilled steak", "Lamb"]
   },
   {
     "id": 21,
@@ -354,7 +374,8 @@
       "Bad",
       "worse"
     ],
-    "img": "../../images/wines/mcguigan.webp"
+    "img": "../../images/wines/mcguigan.webp",
+    "food": ["Nothing"]
   },
   {
     "id": 22,
@@ -371,7 +392,8 @@
       "Cheese",
       "Pepsi max"
     ],
-    "img": "../../images/wines/chateaudefrance.webp"
+    "img": "../../images/wines/chateaudefrance.webp",
+    "food": ["Cheese", "Charcuterie"]
   },
   {
     "id": 23,
@@ -388,6 +410,7 @@
       "Sweet",
       "high acidity"
     ],
-    "img": "../../images/wines/chateauDyquem.png"
+    "img": "../../images/wines/chateauDyquem.png",
+    "food": ["McDonalds"]
   }
 ]
