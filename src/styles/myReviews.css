@@ -171,9 +171,12 @@ button:hover {
     border: 2px solid #9c0909;
     box-shadow: 0 4px 20px rgba(156, 9, 9, 0.3);
     min-width: 300px;
+    max-height: 60vh;
+    overflow-y: auto;
   }
 
   #searchWine input,
+  #searchWine select,
   #searchWine textarea {
     padding: 0.6rem 0.8rem;
     border: 1.5px solid #9c0909;
@@ -183,8 +186,15 @@ button:hover {
     color: #333;
     font-family: inherit;
     resize: vertical;
+    background: white;
+    flex-shrink: 0;
+  }
+
+  #searchWine textarea {
+    min-height: 4.5rem;
   }
   #searchWine input:focus,
+  #searchWine select:focus,
   #searchWine textarea:focus {
     border-color: #6b0606;
     box-shadow: 0 0 0 3px rgba(156, 9, 9, 0.15);
@@ -209,8 +219,58 @@ z-index: 99;
 .fileField {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 1rem;
+    border: 2px dashed #9c0909;
+    border-radius: 8px;
+    background: rgba(156, 9, 9, 0.04);
     font-size: 13px;
     color: #555;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.fileField.dragOver {
+    background: rgba(156, 9, 9, 0.15);
+    border-color: #4a0404;
+}
+
+.uploadIcon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.uploadPreview {
+    max-width: 100%;
+    max-height: 50px;
+    object-fit: contain;
+    border-radius: 6px;
+    pointer-events: none;
+    display: none;
+}
+.fileField.hasFile .uploadPreview { display: block; }
+.fileField.hasFile .uploadIcon { display: none; }
+.fileField.hasFile .uploadHint { display: none; }
+
+.uploadHint {
+    pointer-events: none;
+}
+
+.uploadFileName {
+    pointer-events: none;
+    font-weight: 600;
+    color: #4a0404;
+    word-break: break-all;
+    text-align: center;
+}
+.uploadFileName:empty {
+    display: none;
+}
+
+#searchWine #addImage {
+    display: none;
 }
 
