@@ -372,5 +372,22 @@
       "Pepsi max"
     ],
     "img": "../../images/wines/chateaudefrance.webp"
+  },
+  {
+    "id": 23,
+    "name": "Château d'Yquem",
+    "grape": "Sauvignon blanc",
+    "color": "white",
+    "price": "370€",
+    "year": 2016,
+    "location": "Bordeaux, France",
+    "rating": 4.5,
+    "date": "12.05.2026",
+    "description": "Very good! Had it at Côte d'Azur. So beautiful!",
+    "keywords": [
+      "Sweet",
+      "high acidity"
+    ],
+    "img": "../../images/wines/chateauDyquem.png"
   }
 ]

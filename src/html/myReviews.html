@@ -27,6 +27,14 @@
             <div id="backdrop" class="hidden"></div>
             <form id="searchWine" class="hidden">
                 <input type="text" id="nameOfWine" placeholder="Name of the wine" required>
+                <input type="text" id="grape" placeholder="Grape (e.g., cabernet sauvignon)">
+                <select id="color">
+                    <option value="">Color</option>
+                    <option value="red">Red</option>
+                    <option value="white">White</option>
+                    <option value="rose">Rosé</option>
+                </select>
+                <input type="text" id="price" placeholder="Price (e.g., 150€)">
                 <input type="text" id="location" placeholder="Location (country, city)">
                 <input type="number" id="year" placeholder="year (ex: 2021)">
                 <div id="stars" class="stars" data-rating="0">
@@ -40,7 +48,10 @@
                 <input type="text" id="food" placeholder="Food to match the wine">
                 <textarea id="description" placeholder="Your review" rows="3"></textarea>
                 <label id="imageLabel" class="fileField">
-                    Picture of the wine
+                    <img class="uploadIcon" src="../../images/upload_file_image.webp" alt="">
+                    <img class="uploadPreview" id="uploadPreview" alt="">
+                    <span class="uploadHint" id="uploadHint">Drop a picture here or click to choose from files</span>
+                    <span class="uploadFileName" id="uploadFileName"></span>
                     <input type="file" id="addImage" accept="image/*">
                 </label>
                 <button type="submit" class="addWineButton">Save review</button>
