@@ -64,7 +64,7 @@ function hideFullWine() {
     if (backdrop) backdrop.classList.add('hidden');
 }
 
-function displayReviews(reviews, containerId, limit=null) {
+function displayReviews(reviews, containerId, limit=null, showPrice=false) {
     const container = document.querySelector(containerId);
     container.innerHTML = '';
 
@@ -84,6 +84,7 @@ function displayReviews(reviews, containerId, limit=null) {
             <div class="wineImageStars">
                 <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
             </div>
+            ${showPrice && review.price ? `<p class="winePrice">${review.price}</p>` : ''}
             <p class="wineKeywords">${keywords}</p>
             <p class="wineDescription">${review.description}</p>
         `;
