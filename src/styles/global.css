@@ -184,4 +184,8 @@ body {
     display: none !important;
 }
 
+.siteTitle {
+    cursor: pointer;
+}
+
 

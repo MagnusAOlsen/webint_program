@@ -41,7 +41,6 @@
 }
 
 #showAllButton {
-    max-width: 100px;
     background-color: rgb(0, 0, 0);
 }
 
@@ -61,7 +60,7 @@
 }
 
 .searchPage {
-    flex: 0 0 600px;
+    flex: 0 0 800px;
     position: sticky;
     top: 90px; 
     align-self: flex-start;
@@ -96,6 +95,7 @@
 }
 
 .sortButton {
+    margin: 20px;
     background: none;
     border: 2px solid #9c0909;
     border-radius: 6px;
@@ -115,7 +115,7 @@
     display: none;
     position: absolute;
     top: calc(100% + 6px);
-    left: 0;
+    right: 0;
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -148,5 +148,62 @@
 .sortOption.active {
     color: #9c0909;
     font-weight: 600;
+}
+
+.viewToggleWrapper {
+    position: absolute;
+    left: 0;
+}
+
+.viewToggleBtn {
+    background: none;
+    border: 2px solid #9c0909;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    color: #9c0909;
+    line-height: 1;
+}
+
+.viewToggleBtn:hover,
+.viewToggleBtn.active {
+    background-color: #9c0909;
+    color: white;
+}
+
+.paginationControls {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0 8px;
+}
+
+.paginationBtn {
+    background: none;
+    border: 2px solid #9c0909;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #9c0909;
+}
+
+.paginationBtn:hover:not(:disabled) {
+    background-color: #9c0909;
+    color: white;
+}
+
+.paginationBtn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pageIndicator {
+    font-size: 0.9rem;
+    color: #555;
+    min-width: 100px;
+    text-align: center;
 }
  

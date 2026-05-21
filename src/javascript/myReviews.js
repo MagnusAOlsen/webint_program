@@ -95,6 +95,7 @@ const imageLabel = document.getElementById('imageLabel');
 const imageInput = document.getElementById('addImage');
 const uploadFileName = document.getElementById('uploadFileName');
 const uploadPreview = document.getElementById('uploadPreview');
+const clearFilterBtn = document.getElementById('clearFilterButton');
 
 let previewUrl = null;
 
@@ -153,13 +154,14 @@ function showForm(mode) {
     nameInput.required = false;
     descriptionField.classList.add('hidden');
     imageLabel.classList.add('hidden');
+    clearFilterBtn.classList.remove('hidden');
     submitBtn.textContent = activeFilter ? 'Update filter' : 'Apply filter';
     fillForm(activeFilter);
   } else {
     nameInput.required = true;
     descriptionField.classList.remove('hidden');
     imageLabel.classList.remove('hidden');
-    setFile(null);
+    clearFilterBtn.classList.add('hidden');
     submitBtn.textContent = 'Save review';
     fillForm(null);
   }
@@ -175,6 +177,11 @@ function hideForm() {
 filterBtn.addEventListener('click', () => showForm('filter'));
 addWineBtn.addEventListener('click', () => showForm('add'));
 backdrop.addEventListener('click', hideForm);
+clearFilterBtn.addEventListener('click', () => {
+  activeFilter = null;
+  render();
+  hideForm();
+});
 
 function hasFiles(e) {
   return e.dataTransfer && Array.from(e.dataTransfer.types || []).includes('Files');

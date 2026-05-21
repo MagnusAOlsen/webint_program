@@ -379,7 +379,7 @@
   },
   {
     "id": 22,
-    "name": "Chateaudefrance",
+    "name": "Château De France",
     "grape": "",
     "color": "",
     "price": "",
@@ -392,7 +392,7 @@
       "Cheese",
       "Pepsi max"
     ],
-    "img": "../../images/wines/chateaudefrance.webp",
+    "img": "../../images/wines/chateauDeFrance.png",
     "food": ["Cheese", "Charcuterie"]
   },
   {

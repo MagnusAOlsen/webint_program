@@ -1,6 +1,10 @@
 let wines = [];
 let currentResults = [];
 let currentSort = null;
+let currentPage = 1;
+let showAllResults = false;
+let currentDisplayList = [];
+const PAGE_SIZE = 6;
 
 
 async function loadWines() {
@@ -14,15 +18,39 @@ async function loadWines() {
     }
 }
 
-function displayWines(winesToDisplay) {
+function renderPage() {
     const container = document.querySelector(".wineResults");
+    const paginationControls = document.getElementById("paginationControls");
+    const prevBtn = document.getElementById("prevPage");
+    const nextBtn = document.getElementById("nextPage");
+    const pageIndicator = document.getElementById("pageIndicator");
 
-    if (winesToDisplay.length === 0) {
+    if (currentDisplayList.length === 0) {
         container.innerHTML = "<p>No wines found.</p>";
+        paginationControls.style.display = "none";
         return;
     }
 
-    displayReviews(winesToDisplay, ".wineResults");
+    if (showAllResults) {
+        displayReviews(currentDisplayList, ".wineResults", null, true);
+        paginationControls.style.display = "none";
+        return;
+    }
+
+    const totalPages = Math.ceil(currentDisplayList.length / PAGE_SIZE);
+    const start = (currentPage - 1) * PAGE_SIZE;
+    displayReviews(currentDisplayList.slice(start, start + PAGE_SIZE), ".wineResults", null, true);
+
+    pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+    paginationControls.style.display = totalPages > 1 ? "flex" : "none";
+}
+
+function displayWines(winesToDisplay) {
+    currentDisplayList = winesToDisplay;
+    currentPage = 1;
+    renderPage();
 }
 
 function normalize(str) {
@@ -208,5 +236,32 @@ document.addEventListener("DOMContentLoaded", async () => {
             sortDropdown.classList.remove("open");
             displayWines(sortWines(currentResults, currentSort));
         });
+    });
+
+    const viewToggleBtn = document.getElementById("viewToggleBtn");
+    const prevPage = document.getElementById("prevPage");
+    const nextPage = document.getElementById("nextPage");
+
+    viewToggleBtn.addEventListener("click", () => {
+        showAllResults = !showAllResults;
+        viewToggleBtn.textContent = showAllResults ? "Paginate" : "Show All";
+        viewToggleBtn.classList.toggle("active", showAllResults);
+        currentPage = 1;
+        renderPage();
+    });
+
+    prevPage.addEventListener("click", () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage();
+        }
+    });
+
+    nextPage.addEventListener("click", () => {
+        const totalPages = Math.ceil(currentDisplayList.length / PAGE_SIZE);
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderPage();
+        }
     });
 });

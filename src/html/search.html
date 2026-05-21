@@ -74,13 +74,16 @@
                     Search
                 </button>
                 <button class="primaryButton" type="button" id="showAllButton">
-                    Display All
+                    Clear filters
                 </button>
             </form>
         </main>
         <div class="resultsSection">
             <div class="resultsSectionHeader">
                 <h2>Results</h2>
+                <div class="viewToggleWrapper">
+                    <button class="viewToggleBtn" id="viewToggleBtn" title="Toggle between pages and show all">Show All</button>
+                </div>
                 <div class="sortWrapper">
                     <button class="sortButton" id="sortButton" title="Sort results">&#8645;</button>
                     <div class="sortDropdown" id="sortDropdown">
@@ -92,6 +95,11 @@
                 </div>
             </div>
             <div class="wineResults">
+            </div>
+            <div class="paginationControls" id="paginationControls">
+                <button class="paginationBtn" id="prevPage">&#8592; Prev</button>
+                <span class="pageIndicator" id="pageIndicator">Page 1 of 1</span>
+                <button class="paginationBtn" id="nextPage">Next &#8594;</button>
             </div>
         </div>
     </div>
