@@ -1,5 +1,5 @@
 let today = getTodayString();
-let x = 1;
+let x = parseInt(localStorage.getItem('wineIndex')) || 1;
 let wineOfTheDay;
 
 fetchReviews().then(reviews => {
@@ -15,9 +15,7 @@ fetchReviews().then(reviews => {
 });
 
 fetchSearchReviews().then(searchReviews => {
-
-    wineOfTheDay = searchReviews.find(u => u.id === x);
-    displayWineOfTheDay(getTodayString(), searchReviews);
+    displayWineOfTheDay(today, searchReviews);
 })
 
 function convertDate(dateString) {
@@ -29,19 +27,19 @@ function getTodayString() {
     return new Date().toISOString().split("T")[0];
 }
 
-
 function displayWineOfTheDay(currentDate, reviews) {
-    if (currentDate !== today) {
-        if (x < reviews.length) {
-            x += 1;
-        } else {
-            x = 1;
-        }
-        
-        today = currentDate;
-        wineOfTheDay = reviews.find(u => u.id === x);
-    }
+    const lastDate = localStorage.getItem('lastWineDate');
 
+    if (currentDate !== lastDate) {
+        x = x < reviews.length ? x + 1 : 1;
+        localStorage.setItem('wineIndex', x);
+        localStorage.setItem('lastWineDate', currentDate);
+    }
+   
+    wineOfTheDay = reviews.find(u => u.id === x);
     displayReviews([wineOfTheDay], '#wineOfTheDay', 1);
 }
+
+   
+
 
