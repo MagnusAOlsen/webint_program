@@ -1,4 +1,4 @@
-.mainPage {
+.searchLayout {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
@@ -210,7 +210,7 @@
 /* ── Mobile & Responsive Styles ── */
 @media (max-width: 768px) {
 
-    .mainPage {
+    .searchLayout {
         flex-direction: column;
         gap: 0;
     }
