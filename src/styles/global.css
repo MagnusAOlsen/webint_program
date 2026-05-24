@@ -188,4 +188,76 @@ body {
     cursor: pointer;
 }
 
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    /* Header: stack vertically */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+    }
+
+    .appName {
+        margin-left: 16px;
+    }
+
+    .appName h1 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    /* Nav: scrollable horizontal row */
+    .menu {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 4px 10px 6px;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .menu::-webkit-scrollbar { display: none; }
+
+    .menuButton {
+        margin-left: 0;
+        margin-right: 6px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding: 4px 8px;
+        flex-shrink: 0;
+    }
+
+    /* Primary button full-width */
+    .primaryButton {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 16px;
+    }
+
+    /* Wine cards: full-width on mobile */
+    .wine {
+        max-width: 100%;
+        width: calc(100% - 32px);
+        margin: 8px 0;
+    }
+
+    .fullWine {
+        width: 94%;
+        max-width: 94%;
+        padding: 1.2rem;
+        max-height: 90vh;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 16px 0;
+    }
+}
+
 

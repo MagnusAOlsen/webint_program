@@ -86,3 +86,67 @@
 
 
 
+
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    .mainPage {
+        flex-direction: column;
+        padding: 10px 16px;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .wineOfTheDay {
+        padding: 12px;
+    }
+
+    .heading {
+        font-size: 1.3rem;
+        margin-top: 16px;
+    }
+
+    .myWines {
+        margin-top: 10px;
+    }
+
+    .myWinesButton {
+        width: 100%;
+    }
+
+    .myWinesButton h1 {
+        font-size: 1.3rem;
+    }
+
+    .wineReviewImages {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin: 16px auto;
+        max-width: 100%;
+    }
+
+    .wineImage {
+        max-width: 100%;
+    }
+
+    .findWines {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .findWinesInformation {
+        max-width: 100%;
+    }
+
+    .findWinesRow {
+        grid-template-columns: 90px 1fr;
+        gap: 8px;
+    }
+
+    .findWinesRow input,
+    .wineTypeSelection {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

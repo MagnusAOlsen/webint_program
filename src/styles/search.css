@@ -207,3 +207,78 @@
     text-align: center;
 }
  
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    .mainPage {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .searchPage {
+        flex: none;
+        width: 100%;
+        position: static;
+        margin-top: 16px;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .findWines {
+        max-width: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .findWinesInformation {
+        max-width: 100%;
+    }
+
+    .findWinesRow {
+        grid-template-columns: 90px 1fr;
+        gap: 8px;
+    }
+
+    .findWinesRow input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .wineTypeSelection {
+        width: 100%;
+    }
+
+    .resultsSection {
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+    }
+
+    .resultsSectionHeader {
+        margin: 16px 0 8px;
+    }
+
+    .wineResults {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        gap: 12px;
+    }
+
+    /* Sort and toggle buttons stay in place but shrink */
+    .sortButton,
+    .viewToggleBtn {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+    .paginationControls {
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .paginationBtn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
