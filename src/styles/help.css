@@ -38,3 +38,41 @@
 
 
 
+
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    .welcomeText {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 0 16px;
+        text-align: center;
+    }
+
+    /* Stack nav boxes vertically */
+    .navigationRow {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .navigationBox {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .tipsHelp {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .tipsHelpSection {
+        width: 100%;
+        max-width: 400px;
+    }
+}

@@ -249,3 +249,50 @@ button:hover {
     background-color: #333;
 }
 
+
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    /* Review header: stack */
+    .reviewHeader {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px;
+    }
+
+    .reviewHeaderLeft {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .myRewievsTitle {
+        font-size: 1.5rem;
+    }
+
+    .addWineButton {
+        margin: 0;
+        width: 160px;
+    }
+
+    /* Wine boxes: single column */
+    .wineBoxes {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 16px;
+        gap: 12px;
+    }
+
+    /* Add/filter form modal */
+    #searchWine {
+        width: 90%;
+        max-width: 90%;
+        padding: 1.2rem;
+        max-height: 85vh;
+        box-sizing: border-box;
+    }
+
+    .fileField {
+        padding: 0.7rem;
+    }
+}
