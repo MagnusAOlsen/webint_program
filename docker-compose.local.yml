@@ -1,0 +1,15 @@
+# Local development overlay.
+# Usage:  docker compose -f docker-compose.yml -f docker-compose.local.yml up --build
+# Opens the app on http://localhost:3000/ and bind-mounts src/ and images/
+# so edits on the host are reflected immediately (refresh the browser).
+# Restart the container to pick up changes to server.js itself.
+
+services:
+  app:
+    container_name: winelover-app-local
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src
+      - ./images:/app/images
+    restart: "no"

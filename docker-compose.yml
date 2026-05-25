@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    container_name: winelover-app
+    restart: unless-stopped
+    expose:
+      - "3000"
+    environment:
+      - PORT=3000
+    volumes:
+      - ./data:/app/data
+      - ./images/wines:/app/images/wines
+    networks:
+      - winelover
+
+networks:
+  winelover:
