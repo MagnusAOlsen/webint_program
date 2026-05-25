@@ -105,7 +105,7 @@
     }
 
     .wineReviewImages {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
         gap: 16px;
         margin: 16px auto;
         max-width: 100%;
