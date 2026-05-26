@@ -139,6 +139,7 @@ body {
     background: white;
     box-shadow: 0 4px 20px rgba(156, 9, 9, 0.3);
     padding: 2rem;
+    padding-top: 3rem;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -148,6 +149,25 @@ body {
     max-width: 600px;
     max-height: 85vh;
     overflow-y: auto;
+}
+
+.fullWineClose {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: 1.5px solid #9c0909;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #9c0909;
+    line-height: 1;
+    padding: 0.2rem 0.45rem;
+}
+
+.fullWineClose:hover {
+    background: #9c0909;
+    color: white;
 }
 
 .fullWine h2 {
@@ -163,6 +183,13 @@ body {
     max-width: 60%;
     max-height: 260px;
     object-fit: contain;
+}
+
+.fullWine .wineImageStars img {
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 0.3rem auto;
 }
 
 .fullWine p {
@@ -186,6 +213,86 @@ body {
 
 .siteTitle {
     cursor: pointer;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: #9c0909;
+    margin-top: 30px;
+}
+
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
+
+    /* Header: stack vertically */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+    }
+
+    .appName {
+        margin-left: 16px;
+    }
+
+    .appName h1 {
+        font-size: 1.4rem;
+        margin: 0;
+    }
+
+    /* Nav: scrollable horizontal row */
+    .menu {
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 4px 10px 6px;
+        gap: 0;
+        box-sizing: border-box;
+    }
+
+    .menu::-webkit-scrollbar { display: none; }
+
+    .menuButton {
+        margin-left: 0;
+        margin-right: 6px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        padding: 4px 8px;
+        flex-shrink: 0;
+    }
+
+    /* Primary button full-width */
+    .primaryButton {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 16px;
+    }
+
+    /* Wine cards: full-width on mobile */
+    .wine {
+        max-width: 100%;
+        width: calc(100% - 32px);
+        margin: 8px 0;
+    }
+
+    .fullWine {
+        width: 88%;
+        max-width: 88%;
+        padding: 1rem;
+        padding-top: 2.8rem;
+        max-height: 78vh;
+    }
+
+    .footer {
+        margin-top: 30px;
+        padding: 16px 0;
+    }
 }
 
 

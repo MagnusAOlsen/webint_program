@@ -1,5 +1,4 @@
-.heading {
-    text-align: center;
+.myProfile .heading {
     margin-bottom: 50px;
     font-size: 2.5rem;
 }
@@ -27,7 +26,6 @@
     border: 1px solid #000;
 }
 
-
 .bioInfo {
     font-size: 1.2rem;
     line-height: 2;
@@ -54,15 +52,8 @@
     margin-top: 20px;
 }
 
-.wine {
-    border: 2px solid #800000;
+#profileReviewsGrid .wine {
     border-radius: 15px;
-    padding: 15px;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .wine h3 {
@@ -77,22 +68,62 @@
     color: #333;
 }
 
-.placeYearDate {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-}
+/* ── Mobile & Responsive Styles ── */
+@media (max-width: 768px) {
 
-.wineImageReview img {
-    max-height: 150px;
-    width: auto;
-    object-fit: contain;
-    margin: 10px 0;
-}
+    .myProfile .heading {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
 
-.wineImageStars img {
-    width: 100px;
-    margin-bottom: 10px;
+    .myProfile {
+        padding: 12px 16px;
+    }
+
+    /* Stack profile header vertically */
+    .profileHeader {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0;
+        margin-bottom: 24px;
+    }
+
+    .profilePicture img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bioInfo {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.8;
+    }
+
+    .quoteBox {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .mapSection h2 {
+        text-align: center;
+    }
+
+    #map {
+        height: 280px !important;
+    }
+
+    #profileReviewsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .reviewsHeader {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
 }
