@@ -5,23 +5,23 @@
         <title>
             WineLover - My Reviews
         </title>
-        <link rel="icon" type="image/png" href="../../images/favicon.png" />
-        <link rel="stylesheet" href="../styles/global.css">
-        <link rel="stylesheet" href="../styles/myReviews.css">
+        <link rel="icon" type="image/png" href="/images/favicon.png" />
+        <link rel="stylesheet" href="/styles/global.css">
+        <link rel="stylesheet" href="/styles/myReviews.css">
     </head>
 
     <body>
         <div class="page">
             <div class="header">
                 <div class="appName">
-                    <h1 class="siteTitle" onclick="window.location.href='homepage.html'">WineLover</h1>
+                    <h1 class="siteTitle" onclick="window.location.href='/'">WineLover</h1>
                 </div>
                 <div class="menu">
-                    <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
-                    <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
-                    <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
-                    <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
-                    <button class="menuButton" onclick="window.location.href='help.html'">Help</button>
+                    <button class="menuButton" onclick="window.location.href='/'">Homepage</button>
+                    <button class="menuButton" onclick="window.location.href='/search'">Search</button>
+                    <button class="menuButton" onclick="window.location.href='/myReviews'">My reviews</button>
+                    <button class="menuButton" onclick="window.location.href='/myProfile'">My profile</button>
+                    <button class="menuButton" onclick="window.location.href='/help'">Help</button>
                 </div>
             </div>
             <div id="backdrop" class="hidden"></div>
@@ -49,7 +49,7 @@
                 <input type="text" id="food" placeholder="Food to match the wine">
                 <textarea id="description" placeholder="Your review" rows="3"></textarea>
                 <label id="imageLabel" class="fileField">
-                    <img class="uploadIcon" src="../../images/upload_file_image.webp" alt="">
+                    <img class="uploadIcon" src="/images/upload_file_image.webp" alt="">
                     <img class="uploadPreview" id="uploadPreview" alt="">
                     <span class="uploadHint" id="uploadHint">Drop a picture here or click to choose from files</span>
                     <span class="uploadFileName" id="uploadFileName"></span>
@@ -63,7 +63,7 @@
                     <div class="reviewHeaderLeft">
                         <h1 class="myRewievsTitle">My reviews</h1>
                         <button id="filterButton" class="filterButton">
-                            <img class="filterImage" src="../../images/search_filter_white.png">
+                            <img class="filterImage" src="/images/search_filter_white.png">
                         </button>
                     </div>
                     <button id="addWineButton" class="addWineButton"><h2 class="addWineButtonText">Add new wine</h2></button>
@@ -72,8 +72,8 @@
                 </div>
             </div>
         </div>
-        <script src="../javascript/utils.js"></script>
-        <script src="../javascript/myReviews.js"></script>
+        <script src="/javascript/utils.js"></script>
+        <script src="/javascript/myReviews.js"></script>
     </body>
 </html>
 

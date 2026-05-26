@@ -9,7 +9,7 @@ const PAGE_SIZE = 6;
 
 async function loadWines() {
     try {
-        const response = await fetch("../../data/wineReviews.json");
+        const response = await fetch("/api/wineReviews");
         wines = await response.json();
     }
     catch (error) {

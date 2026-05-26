@@ -5,10 +5,10 @@
     <title>
         WineLover - My Profile
     </title>
-    <link rel="icon" type="image/png" href="../../images/favicon.png" />
-    <link rel="stylesheet" href="../styles/homepage.css">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/myProfile.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/myProfile.css">
     <!-- Leaflet added for map functionality -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -17,14 +17,14 @@
 <body>
     <div class="header">
         <div class="appName">
-            <h1 class="siteTitle" onclick="window.location.href='homepage.html'">WineLover</h1>
+            <h1 class="siteTitle" onclick="window.location.href='/'">WineLover</h1>
         </div>
         <div class="menu">
-            <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
-            <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
-            <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
-            <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
-            <button class="menuButton" onclick="window.location.href='help.html'">Help</button>
+            <button class="menuButton" onclick="window.location.href='/'">Homepage</button>
+            <button class="menuButton" onclick="window.location.href='/search'">Search</button>
+            <button class="menuButton" onclick="window.location.href='/myReviews'">My reviews</button>
+            <button class="menuButton" onclick="window.location.href='/myProfile'">My profile</button>
+            <button class="menuButton" onclick="window.location.href='/help'">Help</button>
         </div>
     </div>
 
@@ -32,7 +32,7 @@
         <h1 class="heading">My Profile</h1>
         <section class="profileHeader">
             <div class="profilePicture">
-                <img src="../../images/profile.png" alt="Profile Picture">
+                <img src="/images/profile.png" alt="Profile Picture">
             </div>
             
             <div class="bioInfo">
@@ -58,13 +58,13 @@
         <section class="reviewsSection">
             <div class="reviewsHeader">
                 <h2 class="sectionHeading">My Most Recent Reviews</h2>
-                <a href="myReviews.html" class="viewAllLink">View all my reviews &rarr;</a>
+                <a href="/myReviews" class="viewAllLink">View all my reviews &rarr;</a>
             </div>
             <div id="profileReviewsGrid" class="reviewsGrid"></div>
         </section>
     </main>
-    <script src="../javascript/utils.js"></script>
-    <script src="../javascript/myProfile.js"></script>
+    <script src="/javascript/utils.js"></script>
+    <script src="/javascript/myProfile.js"></script>
 </body>
 
 <footer class="footer">

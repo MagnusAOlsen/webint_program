@@ -6,30 +6,30 @@
     <title>
         WineLover - homepage
     </title>
-    <link rel="icon" type="image/png" href="../../images/favicon.png" />
-    <link rel="stylesheet" href="../styles/homepage.css">
-    <link rel="stylesheet" href="../styles/global.css">
-    <link rel="stylesheet" href="../styles/search.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/homepage.css">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/search.css">
 </head>
 
 <body>
     <div class="header">
         <div class="appName">
-            <h1 class="siteTitle" onclick="window.location.href='homepage.html'">WineLover</h1>
+            <h1 class="siteTitle" onclick="window.location.href='/'">WineLover</h1>
         </div>
         <div class="menu">
-            <button class="menuButton" onclick="window.location.href='homepage.html'">Homepage</button>
-            <button class="menuButton" onclick="window.location.href='search.html'">Search</button>
-            <button class="menuButton" onclick="window.location.href='myReviews.html'">My reviews</button>
-            <button class="menuButton" onclick="window.location.href='myProfile.html'">My profile</button>
-            <button class="menuButton" onclick="window.location.href='help.html'">Help</button>
+            <button class="menuButton" onclick="window.location.href='/'">Homepage</button>
+            <button class="menuButton" onclick="window.location.href='/search'">Search</button>
+            <button class="menuButton" onclick="window.location.href='/myReviews'">My reviews</button>
+            <button class="menuButton" onclick="window.location.href='/myProfile'">My profile</button>
+            <button class="menuButton" onclick="window.location.href='/help'">Help</button>
         </div>
     </div>
     <div class="mainPage">
         <div class="wineOfTheDay">
             <h1 class="heading">Wine of the day</h1>
             <div id="wineOfTheDay"></div>
-            <form class="findWines" action="search.html" method="GET">
+            <form class="findWines" action="/search" method="GET">
                 <h2 class="heading">Find a wine</h2>
                 <p>Fill in as many as desired</p>
                 <div class="findWinesInformation">
@@ -73,15 +73,15 @@
             </form>
         </div>
         <div class="myWines">
-            <button class="myWinesButton primaryButton" onclick="window.location.href='myReviews.html'">
+            <button class="myWinesButton primaryButton" onclick="window.location.href='/myReviews'">
                 <h1>My wines</h1>
             </button>
             <div class="wineReviewImages" id="wineReviewImages">
             </div>
         </div>
     </div>
-    <script src="../javascript/utils.js"></script>
-    <script src="../javascript/homepage.js"></script>
+    <script src="/javascript/utils.js"></script>
+    <script src="/javascript/homepage.js"></script>
 </body>
 
 <footer class="footer">

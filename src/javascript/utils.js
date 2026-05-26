@@ -1,11 +1,11 @@
 function fetchReviews() {
-    return fetch('../../data/myReviews.json')
+    return fetch('/api/reviews')
         .then(response => response.json())
         .catch(error => console.error("Error loading reviews", error));
 }
 
 function fetchSearchReviews() {
-    return fetch('../../data/wineReviews.json')
+    return fetch('/api/wineReviews')
         .then(response => response.json())
         .catch(error => console.error("Error loading wine reviews", error));
 }
@@ -44,7 +44,7 @@ function showFullWine(review) {
         <h2>${review.name}</h2>
         <img class="wineCardImage" src="${review.img}">
         <div class="wineImageStars">
-            <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
+            <img src="/images/stars/Star_rating_${review.rating}_of_5.png">
         </div>
         <p><strong>Grape:</strong> ${review.grape || ''}</p>
         <p><strong>Color:</strong> ${review.color || ''}</p>
@@ -82,7 +82,7 @@ function displayReviews(reviews, containerId, limit=null, showPrice=false) {
             <h3>${review.name}</h3>
             <img class="wineCardImage" src="${review.img}">
             <div class="wineImageStars">
-                <img src="../../images/stars/Star_rating_${review.rating}_of_5.png">
+                <img src="/images/stars/Star_rating_${review.rating}_of_5.png">
             </div>
             ${showPrice && review.price ? `<p class="winePrice">${review.price}</p>` : ''}
             <p class="wineKeywords">${keywords}</p>

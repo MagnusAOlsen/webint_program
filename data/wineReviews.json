@@ -11,7 +11,7 @@
     "date": "10.03.2026",
     "description": "Elegant Super Tuscan with refined tannins.",
     "keywords": ["elegant", "structured"],
-    "img": "../../images/wines/sassicaia.png"
+    "img": "/images/wines/sassicaia.png"
   },
   {
     "id": 2,
@@ -25,7 +25,7 @@
     "date": "12.03.2026",
     "description": "Classic Bordeaux with exceptional balance.",
     "keywords": ["complex", "refined"],
-    "img": "../../images/wines/lafite.png"
+    "img": "/images/wines/lafite.png"
   },
   {
     "id": 3,
@@ -39,7 +39,7 @@
     "date": "15.03.2026",
     "description": "Luxurious Italian blend with silky texture.",
     "keywords": ["luxury", "silky"],
-    "img": "../../images/wines/ornellaia.png"
+    "img": "/images/wines/ornellaia.png"
   },
   {
     "id": 4,
@@ -53,7 +53,7 @@
     "date": "18.03.2026",
     "description": "Smooth and velvety Napa Merlot.",
     "keywords": ["smooth", "velvety"],
-    "img": "../../images/wines/duckhorn.png"
+    "img": "/images/wines/duckhorn.png"
   },
   {
     "id": 5,
@@ -67,7 +67,7 @@
     "date": "20.03.2026",
     "description": "Traditional Rioja with long aging potential.",
     "keywords": ["oak", "complex"],
-    "img": "../../images/wines/riojaAlta.png"
+    "img": "/images/wines/riojaAlta.png"
   },
   {
     "id": 6,
@@ -81,7 +81,7 @@
     "date": "22.03.2026",
     "description": "Big and juicy Shiraz with spice notes.",
     "keywords": ["bold", "spicy"],
-    "img": "../../images/wines/mollydooker.png"
+    "img": "/images/wines/mollydooker.png"
   },
   {
     "id": 7,
@@ -95,7 +95,7 @@
     "date": "25.03.2026",
     "description": "Fresh tropical flavors with crisp acidity.",
     "keywords": ["tropical", "fresh"],
-    "img": "../../images/wines/kimCrawford.png"
+    "img": "/images/wines/kimCrawford.png"
   },
   {
     "id": 8,
@@ -109,7 +109,7 @@
     "date": "28.03.2026",
     "description": "Creamy Chardonnay with citrus and vanilla.",
     "keywords": ["creamy", "balanced"],
-    "img": "../../images/wines/cakebread.png"
+    "img": "/images/wines/cakebread.png"
   },
   {
     "id": 9,
@@ -123,7 +123,7 @@
     "date": "30.03.2026",
     "description": "Rich and elegant Champagne with fine bubbles.",
     "keywords": ["sparkling", "elegant"],
-    "img": "../../images/wines/bollinger.png"
+    "img": "/images/wines/bollinger.png"
   },
   {
     "id": 10,
@@ -137,7 +137,7 @@
     "date": "02.04.2026",
     "description": "Classic Champagne with bright citrus notes.",
     "keywords": ["sparkling", "crisp"],
-    "img": "../../images/wines/veuveClicquot.png"
+    "img": "/images/wines/veuveClicquot.png"
   },
   {
     "id": 11,
@@ -151,7 +151,7 @@
     "date": "05.04.2026",
     "description": "Prestige Champagne with depth and finesse.",
     "keywords": ["luxury", "complex"],
-    "img": "../../images/wines/domPerignon.png"
+    "img": "/images/wines/domPerignon.png"
   },
   {
     "id": 12,
@@ -165,7 +165,7 @@
     "date": "08.04.2026",
     "description": "Refreshing Provence rosé with floral aromas.",
     "keywords": ["fresh", "floral"],
-    "img": "../../images/wines/minuty.png"
+    "img": "/images/wines/minuty.png"
   },
   {
     "id": 13,
@@ -179,7 +179,7 @@
     "date": "10.04.2026",
     "description": "Dry rosé with bright fruit character.",
     "keywords": ["dry", "fruity"],
-    "img": "../../images/wines/aixRose.png"
+    "img": "/images/wines/aixRose.png"
   },
   {
     "id": 14,
@@ -193,7 +193,7 @@
     "date": "12.04.2026",
     "description": "Powerful Bordeaux with remarkable elegance.",
     "keywords": ["rich", "elegant"],
-    "img": "../../images/wines/chateauPalmer.png"
+    "img": "/images/wines/chateauPalmer.png"
   },
   {
     "id": 15,
@@ -207,7 +207,7 @@
     "date": "15.04.2026",
     "description": "Full-bodied Cabernet with smooth oak finish.",
     "keywords": ["oak", "bold"],
-    "img": "../../images/wines/silverOak.png"
+    "img": "/images/wines/silverOak.png"
   },
   {
     "id": 16,
@@ -221,7 +221,7 @@
     "date": "18.04.2026",
     "description": "Rich and concentrated Napa Cabernet.",
     "keywords": ["concentrated", "smooth"],
-    "img": "../../images/wines/caymus.png"
+    "img": "/images/wines/caymus.png"
   },
   {
     "id": 17,
@@ -235,7 +235,7 @@
     "date": "20.04.2026",
     "description": "Elegant Blanc de Blancs with citrus freshness.",
     "keywords": ["sparkling", "mineral"],
-    "img": "../../images/wines/ruinart.png"
+    "img": "/images/wines/ruinart.png"
   },
   {
     "id": 18,
@@ -249,7 +249,7 @@
     "date": "22.04.2026",
     "description": "Off-dry Riesling with peach and citrus notes.",
     "keywords": ["fruity", "balanced"],
-    "img": "../../images/wines/steMichelle.png"
+    "img": "/images/wines/steMichelle.png"
   },
   {
     "id": 19,
@@ -263,7 +263,7 @@
     "date": "25.04.2026",
     "description": "Balanced Rioja with spice and red fruit.",
     "keywords": ["spicy", "balanced"],
-    "img": "../../images/wines/muga.png"
+    "img": "/images/wines/muga.png"
   },
   {
     "id": 20,
@@ -277,6 +277,6 @@
     "date": "28.04.2026",
     "description": "Refreshing sparkling wine with apple notes.",
     "keywords": ["sparkling", "fresh"],
-    "img": "../../images/wines/chandon.png"
+    "img": "/images/wines/chandon.png"
   }
 ]
