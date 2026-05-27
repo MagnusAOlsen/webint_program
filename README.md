@@ -18,5 +18,8 @@ Our functionalities:
 - User profile page
     - User can update their own profile page with user details and their own personal quote
 
+## Hosted Site
+https://www.winelover.online
+
 ## AI usage
-Copilot used to help remove redundancies from code
+Copilot used to help identify redundancies within styling files
