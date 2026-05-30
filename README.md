@@ -1,7 +1,7 @@
 # WineLover
 
 WineLover is a small wine-catalogue web app built for the EURECOM _webint_ course
-(semester vår2026). It gives wine drinkers a single place to discover wines,
+(semester spring 2026). It gives wine drinkers a single place to discover wines,
 search and filter a catalogue, and keep a personal log of the wines
 they have tried along with their own reviews.
 
