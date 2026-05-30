@@ -81,7 +81,11 @@ src/
 Dockerfile, docker-compose*.yml
 ```
 
-## Running the app
+## Deployment
+
+The app is deployed using a VPS from Hetzner, with Caddy as reverse proxy providing TLS. Review you wines at https://winelover.online!
+
+## Running the app locally
 
 pick one:
 
